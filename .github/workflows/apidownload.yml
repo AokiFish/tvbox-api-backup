@@ -54,13 +54,13 @@ jobs:
             echo "run=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: 运行 api下载器
+      - name: 运行 tvbox_get_api
         if: steps.date_check.outputs.run == 'true'
         run: |
           ARGS=""
           ${{ github.event.inputs.debug == 'true' && 'ARGS="$ARGS --debug"' || '' }}
           ${{ github.event.inputs.force == 'true' && 'ARGS="$ARGS --force"' || '' }}
-          python python/api下载器.py $ARGS
+          python python/tvbox_get_api.py $ARGS
 
       - name: 提交产物
         if: steps.date_check.outputs.run == 'true'
