@@ -1,3 +1,13 @@
+短剧┃搜索1|🏠短剧┃搜1|type: 3|api: https://mpimg.cn/down.php/7e246e896fa4cf52866921b818d7e8cb.py
+短剧搜索|🏠短剧┃搜2|type: 3|api: https://mpimg.cn/down.php/18b8bebbf7b64d39a1e3a90c83a86642.py
+fy|♨️枫叶｜免扫|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/fy.py
+华数|🌀华数┃1920|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/华数.py
+七猫短剧|🎬七猫┃短剧|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/qmdj.py
+七星短剧|🎬七星丨短剧|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/qxdj.py
+星芽短剧|😄星芽｜[短剧]|type: 3|api: http://150.158.52.248/tgyg/lib/apiv741星芽短剧.py
+爱听音乐|📻爱听┃音乐|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/爱听音乐.py
+网络直播|📺网络┃点播|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/网络直播.py
+哔哩直播|📺哔哩┃点播|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/哔哩直播.py
 影视聚合五合一V2.py|影视聚合五合一|type: 3|api: http://150.158.52.248/tgyg/lib/影视聚合五合一V2.py
 py_央视频.py|央视频|type: 3|api: http://150.158.52.248/tgyg/lib/py_央视频.py
 红果短剧最终版 (1).py|红果短剧最终版|type: 3|api: http://150.158.52.248/tgyg/lib/红果短剧最终版 (1).py
@@ -17,7 +27,6 @@ pianku_py|👌片库丨[1080p影视]|type: 3|api: http://150.158.52.248/tgyg/lib
 小蜜蜂PY|👌小蜜蜂丨[1080p影视]|type: 3|api: http://150.158.52.248/tgyg/lib/apiv403小蜜蜂.py
 巴不得看看PY|👌巴不得看看丨[1080p影视]|type: 3|api: http://150.158.52.248/tgyg/lib/apiv423巴不得看看.py
 枫叶影院PY|👀枫叶影院丨[4k影视]|type: 3|api: http://150.158.52.248/tgyg/lib/apiv529枫叶影院.py
-星芽短剧|🎬星芽┃短剧|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/星芽短剧.py
 🔴果PY|👌🔴果丨PY|type: 3|api: http://150.158.52.248/tgyg/lib/apiv765hongguo.py
 央视大全py|📺央视大全[🍵]|type: 3|api: http://150.158.52.248/tgyg/lib/apiv4169央视大全.py
 wangluozb.py|🐅wlzbpy[网络直播]|type: 3|api: http://150.158.52.248/tgyg/lib/apiv4191wlzb.py
@@ -38,12 +47,3 @@ DJ音乐网 PY|👌DJ音乐网丨[音乐]|type: 3|api: http://150.158.52.248/tgy
 小学教育.PY|👌小学教育.丨[教育学习]|type: 3|api: http://150.158.52.248/tgyg/lib/apiv4779小学课堂.py
 初中教育.PY|👌初中教育.丨[教育学习]|type: 3|api: http://150.158.52.248/tgyg/lib/apiv4799初中课堂.py
 高中教育.PY|👌高中教育.丨[教育学习]|type: 3|api: http://150.158.52.248/tgyg/lib/apiv4819高中课堂.py
-短剧┃搜索1|🏠短剧┃搜1|type: 3|api: https://mpimg.cn/down.php/7e246e896fa4cf52866921b818d7e8cb.py
-短剧搜索|🏠短剧┃搜2|type: 3|api: https://mpimg.cn/down.php/18b8bebbf7b64d39a1e3a90c83a86642.py
-fy|♨️枫叶｜免扫|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/fy.py
-华数|🌀华数┃1920|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/华数.py
-七猫短剧|🎬七猫┃短剧|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/qmdj.py
-七星短剧|🎬七星丨短剧|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/qxdj.py
-爱听音乐|📻爱听┃音乐|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/爱听音乐.py
-网络直播|📺网络┃点播|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/网络直播.py
-哔哩直播|📺哔哩┃点播|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/哔哩直播.py

@@ -1,10 +1,10 @@
 {
   "lives": [
     {
-      "name": "Guovin",
-      "url": "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
+      "name": "点击下载",
+      "url": "https://pizazz.us.ci/单线路.zip",
       "ua": "",
-      "source": "更新专用接口"
+      "source": "潇洒"
     },
     {
       "name": "Kimentanm",
@@ -43,10 +43,10 @@
       "source": "饭太硬"
     },
     {
-      "name": "Yoursmile",
-      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt",
-      "ua": "okhttp/3.15",
-      "source": "南风"
+      "name": "Guovin",
+      "url": "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
+      "ua": "",
+      "source": "菠菜pro"
     },
     {
       "name": "幸福年年zb",
@@ -103,12 +103,6 @@
       "source": "幸福年年"
     },
     {
-      "name": "点击下载",
-      "url": "https://pizazz.us.ci/单线路.zip",
-      "ua": "",
-      "source": "潇洒"
-    },
-    {
       "name": "Kimentanm1线",
       "url": "https://down.nigx.cn/raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
       "ua": "",
@@ -119,6 +113,12 @@
       "url": "https://sub.ottiptv.cc/bililive.m3u",
       "ua": "okHttp/Mod-1.5.0.0",
       "source": "嗷呜"
+    },
+    {
+      "name": "Yoursmile",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt",
+      "ua": "okhttp/3.15",
+      "source": "南风"
     }
   ]
 }
