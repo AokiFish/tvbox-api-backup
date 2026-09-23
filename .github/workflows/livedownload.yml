@@ -1,8 +1,8 @@
-name: 接口扫描处理工具
+name: 每日聚合TVBox直播源
 
 on:
   schedule:
-    - cron: "0 19 * * *"   # UTC 19:00 = 北京时间 03:00
+    - cron: "0 18 * * *"   # UTC 18:00 = 北京时间次日 02:00
   workflow_dispatch:
     inputs:
       force:
@@ -15,11 +15,6 @@ on:
         required: false
         type: boolean
         default: false
-  push:
-    paths:
-      - 'tvbox/**'
-      - 'python/**'
-      - '.github/workflows/tvbox_scan.yml'
 
 concurrency:
   group: tvbox-repo-write
@@ -29,12 +24,10 @@ permissions:
   contents: write
 
 jobs:
-  scan:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
     steps:
-      - name: 检出仓库
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -46,19 +39,18 @@ jobs:
       - name: 安装依赖
         run: pip install requests urllib3
 
-      - name: 运行接口扫描处理工具
+      - name: 运行 live下载器
         run: |
           ARGS=""
           ${{ github.event.inputs.debug == 'true' && 'ARGS="$ARGS --debug"' || '' }}
           ${{ github.event.inputs.force == 'true' && 'ARGS="$ARGS --force"' || '' }}
-          cd python
-          python "接口扫描处理工具.py" $ARGS
+          python python/live下载器.py $ARGS
 
       - name: 提交产物
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash
-          git add tvbox/ livelist.txt cjlist.txt pylist.txt
-          git commit -m "chore: 自动更新聚合接口 $(TZ='CST-8' date +%Y-%m-%d)" || echo "no changes"
+          git add tvbox/ livelist.txt
+          git commit -m "chore(live): 每日更新直播源 $(TZ='CST-8' date +%Y-%m-%d)" || echo "no changes"
           git push
