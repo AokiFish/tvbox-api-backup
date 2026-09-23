@@ -68,9 +68,9 @@
     },
     {
       "key": "星芽短剧",
-      "name": "😄星芽｜[短剧]",
+      "name": "🎬星芽┃短剧",
       "type": 3,
-      "api": "http://150.158.52.248/tgyg/lib/apiv741星芽短剧.py",
+      "api": "https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/星芽短剧.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
