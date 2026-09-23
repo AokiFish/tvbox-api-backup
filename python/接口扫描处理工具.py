@@ -284,6 +284,56 @@ def download_one(live, _chain=None):
 
 
 # ---------- 扫描与聚合（完整保留） ----------
+
+def extract_lives_from(data):
+    """从任意顶层结构中尽量提取直播源列表，绝不抛异常。
+    兼容以下常见结构：
+      - {"lives": [...]}                       (TVBox 标准对象)
+      - [{"name":..., "url":...}, ...]          (裸数组，直接是 live)
+      - [{"name":..., "list":[...]}, ...]       (收藏/分组类，list 内再嵌 live)
+      - {"data": {"lives": [...]}}              (外层套了 data 字段)
+    """
+    candidates = []
+    if isinstance(data, dict):
+        lives = data.get("lives")
+        if isinstance(lives, list):
+            candidates.extend(lives)
+        nested = data.get("data")
+        if isinstance(nested, dict) and isinstance(nested.get("lives"), list):
+            candidates.extend(nested["lives"])
+    elif isinstance(data, list):
+        for item in data:
+            if not isinstance(item, dict):
+                continue
+            # 顶层数组元素本身就是一个 live 对象（带 url）
+            if "url" in item:
+                candidates.append(item)
+            # 或是一个分组：{"name":..., "list":[...] / "lives":[...]} 等
+            for sub_key in ("list", "lives", "urls", "channels"):
+                sub = item.get(sub_key)
+                if isinstance(sub, list):
+                    for sub_item in sub:
+                        if isinstance(sub_item, dict):
+                            candidates.append(sub_item)
+    return candidates
+
+
+def extract_sites_from(data):
+    """从任意顶层结构中提取 sites 列表，绝不抛异常。"""
+    if isinstance(data, dict):
+        sites = data.get("sites")
+        if isinstance(sites, list):
+            return sites
+        nested = data.get("data")
+        if isinstance(nested, dict) and isinstance(nested.get("sites"), list):
+            return nested["sites"]
+    elif isinstance(data, list):
+        for item in data:
+            if isinstance(item, dict) and isinstance(item.get("sites"), list):
+                return item["sites"]
+    return []
+
+
 def scan_interfaces():
     print("\n[1/6] 扫描接口文件，提取 lives ...")
     all_lives = []
@@ -304,9 +354,11 @@ def scan_interfaces():
             print(f"  跳过 {json_file.name}: {e}")
             continue
 
-        lives = data.get("lives", [])
-        if not isinstance(lives, list):
-            continue
+        # 兼容多种 JSON 顶层结构：对象 {"lives":[...]} / 数组 [...] / 嵌套 {"data":{...}}
+        # 顶层为 list 时不再抛 AttributeError，而是尽量提取（如 潇洒.json 的分组结构）
+        lives = extract_lives_from(data)
+        if DEBUG and not isinstance(data, dict):
+            print(f"  注意 {json_file.name}: 顶层为 {type(data).__name__}，已尝试兼容提取")
 
         valid = 0
         for item in lives:
@@ -446,7 +498,8 @@ def scan_sites_all():
             print(f"  跳过 {json_file.name}: {e}")
             continue
 
-        sites = data.get("sites", [])
+        # 兼容多种 JSON 顶层结构，顶层为 list 时不再抛 AttributeError
+        sites = extract_sites_from(data)
         if not isinstance(sites, list):
             continue
 
