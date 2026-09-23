@@ -348,7 +348,7 @@ def scan_interfaces():
             continue
         source = json_file.stem
         try:
-            with open(json_file, "r", encoding="utf-8") as f:
+            with open(json_file, "r", encoding="utf-8-sig") as f:
                 data = json.load(f)
         except (json.JSONDecodeError, Exception) as e:
             print(f"  跳过 {json_file.name}: {e}")
@@ -492,7 +492,7 @@ def scan_sites_all():
         if json_file.name in {AGGREGATE_JSON.name, CJ_AGG_JSON.name, PY_AGG_JSON.name}:
             continue
         try:
-            with open(json_file, "r", encoding="utf-8") as f:
+            with open(json_file, "r", encoding="utf-8-sig") as f:
                 data = json.load(f)
         except (json.JSONDecodeError, Exception) as e:
             print(f"  跳过 {json_file.name}: {e}")

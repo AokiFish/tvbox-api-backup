@@ -227,7 +227,7 @@ def scan_interfaces():
             continue
         source = json_file.stem
         try:
-            with open(json_file, "r", encoding="utf-8") as f:
+            with open(json_file, "r", encoding="utf-8-sig") as f:
                 data = json.load(f)
         except (json.JSONDecodeError, Exception) as e:
             print(f"  跳过 {json_file.name}: {e}")

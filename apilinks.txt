@@ -11,3 +11,30 @@
 # 带空格、逗号后带空格都可以，脚本会 strip
 王二小, https://9280.kstore.vip/aiwex.json, https://9280.kstore.space/aiwex.json
 南风, https://ghproxy.monkeyray.net/raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json
+
+# ===== 追加补充（2026-09-23）=====
+# 原则：仅追加，不删除上方原有源。原有源在沙箱可能连不通，但用户侧网络通常可达，保留作冗余镜像。
+# 以下均经沙箱实测可达且为合法 TVBox 配置；qist 系列来自信任源 https://github.com/qist/tvbox
+
+# —— qist/tvbox 系列（master 分支，沙箱实测均 200）——
+潇洒(qist), https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json, https://qist.wyfc.qzz.io/xiaosa/api.json
+饭太硬(qist), https://raw.githubusercontent.com/qist/tvbox/master/fty.json, https://qist.wyfc.qzz.io/fty.json
+qist-0827, https://raw.githubusercontent.com/qist/tvbox/master/0827.json
+qist-0825, https://raw.githubusercontent.com/qist/tvbox/master/0825.json
+qist-0821, https://raw.githubusercontent.com/qist/tvbox/master/0821.json
+qist-0826, https://raw.githubusercontent.com/qist/tvbox/master/0826.json
+qist-367, https://raw.githubusercontent.com/qist/tvbox/master/367.json
+qist-9918, https://raw.githubusercontent.com/qist/tvbox/master/9918.json
+qist-99188, https://raw.githubusercontent.com/qist/tvbox/master/99188.json
+qist-dianshi, https://raw.githubusercontent.com/qist/tvbox/master/dianshi.json
+qist-js, https://raw.githubusercontent.com/qist/tvbox/master/js.json
+qist-jsm, https://raw.githubusercontent.com/qist/tvbox/master/jsm.json
+qist-0707, https://raw.githubusercontent.com/qist/tvbox/master/0707.json
+
+# —— 其他社区可用源（用户提供 / 沙箱实测）——
+俊哥, http://home.jundie.top:81/top98.json
+动漫城, https://www.yingm.cc/dm/dm.json
+dxawi, https://dxawi.github.io/0/0.json
+小马, https://szyyds.cn/tv/x.json
+饭太硬(正源), https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/fongmi.json
+道长(drpy), https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/XYQTVBox/drpy_js/drjs_config.json

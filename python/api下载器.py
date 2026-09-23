@@ -41,7 +41,7 @@ LEGACY_CONFIG_FILE = "api_list.json"      # 老格式：JSON（API_LIST / API_MI
 def _load_txt_config(txt_path):
     """新格式：每行 '名称,URL1,URL2,...'，# 开头为注释。返回 (api_list, {})。"""
     api_list = []
-    with open(txt_path, "r", encoding="utf-8") as f:
+    with open(txt_path, "r", encoding="utf-8-sig") as f:
         for line in f:
             line = line.strip()
             if not line or line.startswith("#"):
@@ -60,7 +60,7 @@ def _load_txt_config(txt_path):
 
 def _load_json_config(json_path):
     """老格式：JSON 文件，含 API_LIST / API_MIRRORS。返回 (api_list, api_mirrors)。"""
-    with open(json_path, "r", encoding="utf-8") as f:
+    with open(json_path, "r", encoding="utf-8-sig") as f:
         cfg = json.load(f)
     api_list = [tuple(x) for x in cfg.get("API_LIST", [])]
     api_mirrors = cfg.get("API_MIRRORS", {})
